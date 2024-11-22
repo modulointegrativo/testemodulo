@@ -1,0 +1,139 @@
+/* Estilos Globais */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f3f4f6;
+}
+
+/* Estilo Principal do App */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Cabeçalho */
+.App-header {
+  background-color: #1f2937;
+  color: #f9fafb;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* Informações da Universidade */
+.university-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Nome da Universidade */
+.university-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #3b82f6;
+}
+
+/* Logotipo da Universidade */
+.university-logo {
+  height: 60px;
+  width: auto;
+}
+
+/* Conteúdo Principal */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.final-thoughts {
+  margin-top: 20px;
+  text-align: center;
+  background-color: #f0f0f5;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.final-thoughts h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #1f2937;
+}
+
+.final-thoughts p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.final-thoughts a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.final-thoughts a:hover {
+  text-decoration: underline;
+}
+
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #1f2937;
+  color: white;
+}
+
+.university-logo {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1rem;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.App-footer {
+  background-color: #1f2937;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+.App-footer p {
+  margin: 5px 0;
+}
+
+.App-footer strong {
+  color: #4caf50;
+}

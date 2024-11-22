@@ -1,0 +1,79 @@
+.denuncia-page {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f8fa; /* Cor de fundo mais clara para modernizar */
+    color: #444; /* Texto com maior contraste */
+    line-height: 1.6; /* Melhora a legibilidade */
+}
+
+.denuncia-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem; /* Fonte maior para destacar o título */
+    font-weight: bold;
+    color: #222; /* Cor mais escura para o título */
+}
+
+.sobre-projeto,
+.canais-denuncia {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff; /* Fundo branco para contraste */
+    border: 1px solid #e0e0e0; /* Bordas suaves */
+    border-radius: 12px; /* Bordas arredondadas modernas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animação ao passar o mouse */
+}
+
+.sobre-projeto:hover,
+.canais-denuncia:hover {
+    transform: translateY(-5px); /* Efeito de elevação */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra mais acentuada ao hover */
+}
+
+.sobre-projeto h2,
+.canais-denuncia h2 {
+    font-size: 1.8rem; /* Fonte ligeiramente maior */
+    margin-bottom: 15px;
+    color: #1a1a1a; /* Cor de destaque */
+    font-weight: 600; /* Deixa o título mais forte */
+}
+
+.canais-denuncia ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 10px; /* Adiciona mais espaço entre o texto e os marcadores */
+}
+
+.canais-denuncia li {
+    margin-bottom: 10px;
+    font-size: 1.1rem; /* Fonte um pouco maior para facilitar a leitura */
+    color: #555; /* Texto com tom mais claro */
+}
+
+.canais-denuncia a {
+    color: #0066cc; /* Azul mais moderno */
+    text-decoration: none;
+    font-weight: 500; /* Destaque nos links */
+    transition: color 0.2s ease-in-out; /* Suaviza a troca de cor */
+}
+
+.canais-denuncia a:hover {
+    color: #004999; /* Cor mais escura no hover */
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .denuncia-page {
+        padding: 15px; /* Reduz o espaçamento em telas menores */
+    }
+
+    .sobre-projeto h2,
+    .canais-denuncia h2 {
+        font-size: 1.6rem; /* Ajusta o tamanho da fonte */
+    }
+
+    .canais-denuncia li {
+        font-size: 1rem; /* Tamanho menor para listas */
+    }
+}

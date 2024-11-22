@@ -1,0 +1,497 @@
+/* Layout Principal */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f4f6;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Contêiner Principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+/* Header */
+.header {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.university-name {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+/* Instruções */
+.instructions {
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #f0f0f5;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.instructions p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.instructions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.instructions li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.instructions .ball {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+
+/* Conteúdo Principal */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Game Container */
+.game-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Personagem - Imagem e Áreas */
+.person {
+    position: relative;
+    width: 100%; 
+    max-width: 300px;
+    aspect-ratio: 3 / 6; /* Mantém proporção */
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Áreas de Interação - Base */
+.area {
+    position: absolute;
+    border: 2px dashed rgba(0, 0, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+/* Configuração Individual das Áreas */
+.area.cabecaDireita {
+    top: 32%;
+    left: 27.5%;
+    width: 5.5%;
+    height: 3%;
+}
+
+.area.cabecaEsquerda {
+    top: 33%;
+    left: 73%;
+    width: 5.5%;
+    height: 3%;
+}
+
+.area.bocaDireita {
+    top: 44%;
+    left: 27%;
+    width: 5.5%;
+    height: 3%;
+}
+
+.area.peitoEsquerdo {
+    top: 48%;
+    left: 31%;
+    width: 6%;
+    height: 4%;
+}
+
+.area.peitoDireito {
+    top: 49%;
+    left: 23.5%;
+    width: 6%;
+    height: 3%;
+}
+
+.area.cotovelo {
+    top: 51%;
+    left: 39%;
+    width: 7%;
+    height: 3%;
+}
+
+.area.maoDireita {
+    top: 55.4%;
+    left: 44%;
+    width: 6%;
+    height: 3%;
+}
+
+.area.genitalia {
+    top: 56%;
+    left: 26%;
+    width: 7%;
+    height: 3%;
+}
+
+.area.pernaEsquerdaSuperior {
+    top: 52.5%;
+    left: 27%;
+    width: 7%;
+    height: 3%;
+}
+
+.area.pernaEsquerdaInferior {
+    top: 45%;
+    left: 20.5%;
+    width: 6%;
+    height: 3%;
+}
+
+.area.pernaDireitaSuperior {
+    top: 60%;
+    left: 32%;
+    width: 7%;
+    height: 3%;
+}
+
+.area.pernaDireitaInferior {
+    top: 60%;
+    left: 22%;
+    width: 7%;
+    height: 3%;
+}
+
+.area.dorso {
+    top: 47%;
+    left: 73%;
+    width: 7%;
+    height: 3%;
+}
+
+.area.bunda {
+    top: 56.5%;
+    left: 72.5%;
+    width: 7%;
+    height: 3%;
+}
+
+/* Ombro Esquerdo */
+.area.ombroEsquerdo {
+    top: 46%;
+    left: 65%;
+    width: 7%;
+    height: 4%;
+}
+
+/* Ombro Direito */
+.area.ombroDireito {
+    top: 25%;
+    left: 75%;
+    width: 7%;
+    height: 4%;
+}
+
+/* Bochechas */
+.area.bochechaDireita {
+    top: 42.5%;
+    left: 34%;
+    width: 7%;
+    height: 3%;
+}
+
+.area.bochechaEsquerda {
+    top: 35%;
+    left: 30%;
+    width: 7%;
+    height: 3%;
+}
+
+/* Bolas */
+.balls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: grab;
+    transition: transform 0.2s ease;
+}
+
+.ball:hover {
+    transform: scale(1.1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.ball.verde {
+    background-color: #4caf50;
+}
+
+.ball.amarela {
+    background-color: #ffc107;
+}
+
+.ball.vermelha {
+    background-color: #f44336;
+}
+
+/* Mensagem de Feedback */
+.message {
+    margin-bottom: 10px;
+    color: #f44336;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.success-message {
+    color: #4caf50;
+    font-weight: bold;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Considerações Finais */
+.final-thoughts {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.final-thoughts p {
+    margin: 5px 0;
+}
+
+/* Ajustes para Dispositivos Móveis */
+@media (max-width: 768px) {
+    .person {
+        max-width: 200px;
+    }
+
+    .balls {
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .ball {
+        width: 40px;
+        height: 40px;
+    }
+
+    .area {
+        width: 6%;
+        height: 6%;
+    }
+}
+
+.message-overlay {
+    position: absolute;
+    top: 5%; /* Ajustado para sobrepor a área da cabeça */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco translúcido */
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 20;
+    font-size: 0.9rem;
+}
+.message-overlay {
+    position: absolute;
+    top: 5%; /* Ajustado para sobrepor a área da cabeça */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco translúcido */
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 20;
+    font-size: 0.9rem;
+}
+.reset-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #1f2937;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+    background-color: #3b82f6;
+}
+
+.gender-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .gender-selection h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #1f2937;
+  }
+  
+  .gender-options {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .gender-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    width: 120px;
+  }
+  
+  .gender-button:hover {
+    background-color: #2563eb;
+    transform: translateY(-5px);
+  }
+  
+  .gender-button:active {
+    transform: translateY(0);
+  }
+  
+  .gender-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 5px;
+  }
+  
+
+  /* Cor do botão de Menina */
+.gender-button:nth-child(2) {
+    background-color: #f472b6; /* Rosa */
+}
+
+.menu-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 15px;
+  }
+  
+  .menu-button:hover {
+    background-color: #388e3c;
+  }
+  
+  .back-button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .back-button:hover {
+    background-color: #e64a19;
+  }
+  
+  .denuncia-content {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .sobre-projeto,
+  .canais-denuncia {
+    margin-bottom: 20px;
+  }
+  
+  .sobre-projeto h3,
+  .canais-denuncia h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .canais-denuncia ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .canais-denuncia li {
+    margin-bottom: 8px;
+  }
+  
+  .canais-denuncia a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .canais-denuncia a:hover {
+    text-decoration: underline;
+  }
+
+  .back-button {
+    display: block; /* Garante que o botão ocupe uma linha inteira */
+    margin: 10px 0; /* Adiciona espaço acima e abaixo */
+    text-align: left; /* Alinha o texto interno à esquerda */
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .back-button:hover {
+    background-color: #d32f2f;
+  }
+  
