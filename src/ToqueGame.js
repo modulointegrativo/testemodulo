@@ -152,20 +152,15 @@ const ToqueGame = ({ gender, onBack }) => {
                 Voltar
             </button>
 
-            <div className="instructions">
-                <h2>Semáforo do Toque</h2>
-                <p>Arraste as bolinhas para as partes do corpo corretas. Cada cor tem um significado:</p>
-                <ul>
-                    <li><span className="ball verde"></span> Verde: Regiões seguras para o toque.</li>
-                    <li><span className="ball amarela"></span> Amarelo: Regiões para ficar atento.</li>
-                    <li><span className="ball vermelha"></span> Vermelho: Regiões que não devem ser tocadas sem permissão.</li>
-                </ul>
-            </div>
+            
+       
+            
 
+             
             <div
                 className="game-container"
                 onTouchMove={handleTouchMove} // Impede rolagem ao tocar
-                onTouchEnd={handleTouchEnd}
+                onTouchEnd={handleTouchEnd} //
             >
                 <div className="person">
                     {gender === 'menino' && (

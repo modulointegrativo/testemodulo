@@ -1,14 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Toque from './Toque';
-import Denuncia from './Denuncia'; // Página de Canais de Denúncia
-import './App.css'; // Estilos globais
+import Denuncia from './Denuncia';
+import CelularJogo from './CelularJogo';
+import './App.css';
 
 function App() {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
     return (
         <Router>
             <div className="App">
-                {/* Cabeçalho com nome e logo da universidade */}
                 <header className="App-header">
                     <div className="university-info">
                         <img
@@ -23,15 +25,14 @@ function App() {
                     </div>
                 </header>
 
-                {/* Conteúdo principal */}
                 <main className="content">
                     <Routes>
-                        <Route path="/" element={<Toque />} />
+                        <Route path="/" element={<Toque isMobile={isMobile} />} />
                         <Route path="/denuncia" element={<Denuncia />} />
+                        <Route path="/jogo" element={<CelularJogo />} />
                     </Routes>
                 </main>
 
-                {/* Rodapé */}
                 <footer className="App-footer">
                     <p>
                         Este site foi desenvolvido por estudantes de medicina da turma 23 da
